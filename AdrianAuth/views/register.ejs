@@ -1,0 +1,37 @@
+
+<header>
+    <h2>Register to <strong class="brand">Adrian Services</strong></h>
+</header>
+
+<div>
+    <!-- create ejs loop through erros -->
+    <% if (errors.length > 0) { %>
+        <% errors.forEach(error => { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% }) %>
+    <% } %>
+
+</div>
+<form action="/register" method="POST">
+    <div class="mt-3">
+        <label for="username" class="form-label">Username</label>
+        <input class="form-control" type="text" placeholder="Enter your username" name="username" id="username" required>
+    </div>
+    <div class="mt-3">
+        <label for="email" class="form-label">Email</label>
+        <input class="form-control" type="text" placeholder="Enter your email" name="email" id="email" required>
+    </div>
+    <div class="mt-3">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" type="password" placeholder="Enter your password" name="password" id="password" required>
+    </div>
+    <div class="mt-3">
+        <a href="/login">Already have an account? Login</a>
+    </div>
+    <div class="mt-3">
+        <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+</form>
+

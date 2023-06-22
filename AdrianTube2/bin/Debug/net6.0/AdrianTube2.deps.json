@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AdrianTube2/1.0.0": {
+        "runtime": {
+          "AdrianTube2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AdrianTube2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

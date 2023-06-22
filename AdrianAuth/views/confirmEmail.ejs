@@ -1,0 +1,23 @@
+
+    <header>
+        <h2>Confirm your <strong class="brand">
+            E-mail 
+        </strong></h2>
+    </header>
+
+    <div>
+        <% if (errors.length > 0) { %>
+            <% errors.forEach(error => { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+
+    <div>
+        <p>Please confirm E-mail. We will send confirmation link on your mail <strong class="brand"><%= email %></strong></p>
+    </div>
+
+
+

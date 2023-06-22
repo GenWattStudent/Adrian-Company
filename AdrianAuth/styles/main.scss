@@ -1,0 +1,36 @@
+$body-color : #ebebeb;
+$primary: #1bc449;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.btn-primary {
+    color: $body-color;
+    &:hover {
+        color: $body-color;
+    }
+}
+
+.brand {
+    color: $primary;
+}
+
+// input placeholder color change
+.form-control::placeholder {
+    color: #000;
+}
+
+.form-control:focus, .form-control:active, .form-control:hover, .form-control {
+    color: #000;
+}
+
+a {
+    color: $body-color;
+}
+
+body {
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}

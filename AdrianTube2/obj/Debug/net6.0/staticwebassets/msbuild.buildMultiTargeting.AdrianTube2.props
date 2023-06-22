@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AdrianTube2.props" />
+</Project>

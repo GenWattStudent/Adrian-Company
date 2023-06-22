@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const AuthController_1 = __importDefault(require("../controllers/AuthController"));
+const Authenticate_1 = __importDefault(require("../services/Authenticate"));
+const router = (0, express_1.Router)();
+const authController = new AuthController_1.default();
+const authenticate = new Authenticate_1.default();
+router.get('/register', authController.renderRegister);
+router.post('/register', authController.register);
+router.get('/login', authController.renderLogin);
+router.post('/login', authController.login);
+router.get('/confirm', authController.renderConfirm);
+router.get('/confirm/:token', authController.confirmEmail);
+router.get('/profile', authenticate.authenticateJwtAndRefreshToken, authController.renderProfile);
+router.get('/', authController.redirectToLogin);
+exports.default = router;
